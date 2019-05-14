@@ -1,0 +1,9 @@
+RewriteEngine off
+DirectoryIndex index.php
+AddDefaultCharset WINDOWS-1251
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^cat/([0-9]+)$ index.php?cat=$1 [L]
+RewriteRule ^cat/([0-9]+)/([0-9]+)$ index.php?cat=$1&page=$2 [L]
+RewriteRule ^rel/([0-9]+)$ index.php?rel=$1 [L]
